@@ -5,6 +5,8 @@ import com.utn.enunciado1.Libro;
 import com.utn.enunciado2.Cliente;
 import com.utn.enunciado2.Factura;
 import com.utn.enunciado2.ItemVenta;
+import com.utn.enunciado3.ClienteV2;
+import com.utn.enunciado3.CuentaCorriente;
 
 public class Main {
 
@@ -42,5 +44,19 @@ public class Main {
         compra2.buy(item2, 1);
         compra2.buy(item3, 1);
         compra2.printCompraV2();
+
+        /////****ENUNCIADO 3
+        ClienteV2 ignacio = new ClienteV2("Ignacio", 'M');
+        ignacio.printClienteV2();
+        CuentaCorriente ctacte1 = new CuentaCorriente(ignacio, 10000);
+
+        ctacte1.withdraw(50);
+        ctacte1.withdrawV2(9000);
+        ctacte1.withdrawV2(10000);
+        ctacte1.deposit(25.5);
+        ctacte1.deposit(999.5);
+        ctacte1.deposit(6000);
+        ctacte1.printCtaCte();
+        ctacte1.printMoves();
     }
 }
