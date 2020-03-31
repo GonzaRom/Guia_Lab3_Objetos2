@@ -39,13 +39,13 @@
          de la fecha.
       b. Cree un objeto de tipo Cliente, imprima sus detalles por pantalla. Para esto
          haga uso de un método que facilite la impresión del mismo.
-         Cliente[id=?, nombre=?, email=?, descuento=?]
+         **Cliente[id=?, nombre=?, email=?, descuento=?]**
       c. Cree un objeto de tipo Factura que posea al Cliente anteriormente creado.
          Una vez hecho esto, imprima por pantalla el monto total de esta Factura y el
          monto total luego de aplicarle el descuento.
       d. Cree un método que facilite la impresión del objeto de tipo Factura y que
          siga el siguiente formato.
-         Factura[id=?, fecha=?, monto=?, montoDesc=?, Cliente[id=?, nombre=?,email=?, descuento=?]]
+         **Factura[id=?, fecha=?, monto=?, montoDesc=?, Cliente[id=?, nombre=?,email=?, descuento=?]]**
       e. Analizar de agregar el tipo ItemVenta, que representa un producto que forma parte de la venta. El mismo contiene un id,       un nombre, descripción y precio unitario. Considere las modificaciones necesarias en el tipo Factura para que el mismo pueda almacenar múltiples Ítems de venta y a su vez calcular los montos totales con y sin el descuento aplicado.
 
 3. Necesitamos crear un programa para manejar los datos de una Cuenta bancaria de
