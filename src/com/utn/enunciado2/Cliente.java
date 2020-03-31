@@ -8,15 +8,19 @@ public class Cliente {
     private String email;
     private double descuento;
 
-    public Cliente (String nombre,String email,double desc){
-        this.nombre=nombre;
-        this.email=email;
-        descuento=desc;
+    public Cliente(String nombre, String email, double desc) {
+        this.nombre = nombre;
+        this.email = email;
+        descuento = desc;
         setId();
     }
 
+    //Exercise 2 - a
+    //Implementation of UUID Class for a random user ID
     public static void setId() {
-        Cliente.id = UUID.randomUUID().toString().replace("-", "").substring(0, 5);///genero un UUID random, lo paso a string, reemplazo los simbolos - y limito la cadena a 9 caracteres
+        Cliente.id = UUID.randomUUID().toString().replace("-", "").substring(0, 5);
+        //Get a random UUID , transform it to String, reduce it to 5 character long and replace the " - " symbol in order to get a clean alphanumeric ID
+
     }
 
     public static String getId() {
@@ -43,7 +47,7 @@ public class Cliente {
         return email;
     }
 
-    public void printClient(){
-        System.out.println("Cliente[id="+id+", nombre="+nombre+", email="+email+", descuento=%"+descuento+"]");
+    public void printClient() {
+        System.out.println("Cliente[id=" + id + ", nombre=" + nombre + ", email=" + email + ", descuento=%" + descuento + "]");
     }
 }
