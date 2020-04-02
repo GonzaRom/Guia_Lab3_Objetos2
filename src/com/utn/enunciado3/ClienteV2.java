@@ -10,12 +10,12 @@ public class ClienteV2 {
     public ClienteV2(String name, char gender) {
         this.gender = gender;
         this.name = name;
-        setId();
+        this.id = UUID.randomUUID().toString().substring(0, 6).replace("-", "");
     }
 
-    public static void setId() {
+    /*public static void setId() {
         ClienteV2.id = UUID.randomUUID().toString().substring(0, 6).replace("-", "");
-    }
+    }*/
 
 
     public static String getId() {
