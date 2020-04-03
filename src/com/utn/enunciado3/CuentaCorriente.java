@@ -9,21 +9,15 @@ public class CuentaCorriente {
     private ClienteV2 client;
     private double[] historyDep = new double[10];
     private double[] historyWithd = new double[10];
-    private static int counterDep;
-    private static int counterWithd;
+    private static int counterDep = 0;
+    private static int counterWithd = 0;
 
     public static final double MAX = -2000;             //Constant so you can change the limit in only one place
 
     public CuentaCorriente(ClienteV2 client, double balance) {
-        setId();
+        this.id = UUID.randomUUID().toString().replace("-", "").substring(0, 5);
         this.client = client;
         this.balance = balance;
-        counterDep = 0;
-        counterWithd = 0;
-    }
-
-    public static void setId() {
-        CuentaCorriente.id = UUID.randomUUID().toString().replace("-", "").substring(0, 5);
     }
 
     public void deposit(double toDepo) {
