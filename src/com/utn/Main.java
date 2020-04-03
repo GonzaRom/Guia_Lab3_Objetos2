@@ -7,14 +7,16 @@ import com.utn.enunciado2.Factura;
 import com.utn.enunciado2.ItemVenta;
 import com.utn.enunciado3.ClienteV2;
 import com.utn.enunciado3.CuentaCorriente;
+import jdk.management.jfr.FlightRecorderMXBean;
 
 public class Main {
 
     public static void main(String[] args) {
 
         Autor joshuaB = new Autor("Joshua", "Blosh", "joshua@email.com", 'M');
+        Autor maritoU = new Autor("Marito", "Utn", "marito@email.com", 'M');
         Libro book = new Libro("Effective Java", 450, 150, joshuaB);
-
+        book.setEscritor(maritoU);
         joshuaB.printAutor();
         book.showBook();
 
@@ -24,7 +26,7 @@ public class Main {
         book.setStock(50);
         book.showBook();
         System.out.println();
-        book.showAutor();
+        book.showAutorFull();
         System.out.println();
         book.costBook();
 
